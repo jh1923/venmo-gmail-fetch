@@ -26,9 +26,10 @@
   </p>
 </div>
 
-<h2 align="center">⚠️⚠️⚠️ This README is under construction!!! ⚠️⚠️⚠️</h3> <br>
+<h2 align="center">⚠️⚠️⚠️ This README is under construction!!! ⚠️⚠️⚠️</h3> 
 
 <!-- TABLE OF CONTENTS -->
+<a id="table-of-contents"></a>
 <details open>
   <summary>Table of Contents</summary>
   <ol>
@@ -51,6 +52,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#footnotes">Footnotes</a></li>
   </ol>
 </details>
 
@@ -70,9 +72,9 @@ Venmo does not have an official public API, so services that require information
 [![Google Cloud][google-cloud]][google-cloud-url]
 [![Gmail][gmail]][gmail-url]
 
-<p align="right"><a href="#readme-top">Back to Top</a></p>
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
-<!-- GETTING STARTED -->
+<!-- SETUP -->
 ## Setup
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -108,9 +110,6 @@ We need to set up a filter and label to store emails from Venmo for us to parse.
 
         Select "Create filter" to create the filter.
         ![Screenshot of filter options for Gmail filter setup](setup/filter_options.png)
-        
-        
-[^1]: This is how we ensure that all emails in our filter are associated with Venmo transactions, because they all have a Transaction ID.
 
 ### Google Cloud Console
 We use Google Cloud Console's Gmail API and OAuth token to ensure that our script has access to the Gmail inbox where we added our filter and label.
@@ -140,7 +139,7 @@ Create a virtual environment in this directory by running:
    ```
 3. Upload your Google Cloud Console project credentials file
 
-<p align="right"><a href="#readme-top">Back to Top</a></p>
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -149,7 +148,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right"><a href="#readme-top">Back to Top</a></p>
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -160,15 +159,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right"><a href="#readme-top">Back to Top</a></p>
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
-
-<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -176,9 +170,12 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 * The [README template](https://github.com/othneildrew/Best-README-Template/blob/main/BLANK_README.md) used for this project was created by [othneildrew](https://github.com/othneildrew).
 * Badges are sourced from [Shields.io](https://shields.io/badges/static-badge).
 
-<p align="right"><a href="#readme-top">Back to Top</a></p>
 
+## Footnotes
+        
+[^1]: This is how we ensure that all emails in our filter are associated with Venmo transactions, because they all have a Transaction ID.
 
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
