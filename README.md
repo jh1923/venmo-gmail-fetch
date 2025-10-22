@@ -19,15 +19,13 @@
     Fetches Venmo transaction messages from Gmail and then parses them into dictionaries containing information about the transactions.
     <br />
     <a href="https://github.com/jh1923/venmo-gmail-fetch"><strong>Explore the Repo »</strong></a>
-    <br />
-    <br />
     <a href="https://github.com/jh1923/venmo-gmail-fetch/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/jh1923/venmo-gmail-fetch/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
-
+<h2 align="center">⚠️⚠️⚠️ This README is under construction!!! ⚠️⚠️⚠️</h3> <br>
 
 <!-- TABLE OF CONTENTS -->
 <details open>
@@ -69,7 +67,7 @@ Venmo does not have an official public API, so services that require information
 [![Google Cloud][google-cloud]][google-cloud-url]
 [![Gmail][gmail]][gmail-url]
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 <!-- GETTING STARTED -->
 ## Setup
@@ -138,11 +136,8 @@ Create a virtual environment in this directory by running:
    pip install -r scripts/requirements.txt
    ```
 3. Upload your Google Cloud Console project credentials file
-4. 
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
-
-
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -151,10 +146,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
-
-
-
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -165,7 +157,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 
 <!-- LICENSE -->
@@ -173,7 +165,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -182,7 +174,7 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 * Badges from [Shields.io](https://shields.io/badges/static-badge).
 * []()
 
-<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
+<p align="right"><a href="#readme-top">Back to Top</a></p>
 
 
 
