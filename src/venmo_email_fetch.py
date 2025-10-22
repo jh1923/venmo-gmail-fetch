@@ -151,10 +151,13 @@ def main():
             mark_as_read(service, msg_id)
     return transactions
 
-if __name__ == "__main__":
+def log_results():
     with open("fetch_results.log", 'w') as f:
         info = main()
         f.write(f"{datetime.now().strftime('%m-%d-%Y %H:%M:%S')} | {'No unread emails.' if not info else 'New transactions found: '}")
         if info:
             for transaction in info:
-                f.write("\n\t" + str(transaction))
+                f.write("\n\t" + str(transaction))    
+
+if __name__ == "__main__":
+    main()
