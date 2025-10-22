@@ -39,9 +39,11 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#setup">Setup</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#gmail">Gmail Filter and Label</a></li>
+        <li><a href="#google-cloud-console">Google Cloud Console</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -172,8 +174,7 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 ## Acknowledgments
 
 * The [README template](https://github.com/othneildrew/Best-README-Template/blob/main/BLANK_README.md) used for this project was created by [othneildrew](https://github.com/othneildrew).
-* Badges from [Shields.io](https://shields.io/badges/static-badge).
-* []()
+* Badges are sourced from [Shields.io](https://shields.io/badges/static-badge).
 
 <p align="right"><a href="#readme-top">Back to Top</a></p>
 
