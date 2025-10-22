@@ -119,11 +119,11 @@ We use Google Cloud Console's Gmail API and OAuth token to ensure that our scrip
 > [!TIP]
 > Using a virtual environment is recommended in order to keep your system environment clean. Create a virtual environment in this directory by running:
   ```sh 
-  python -m venv /path/to/new/virtual/env
+  python -m venv .venv
   ```
   > Then, enter the virtual environment
   ```sh
-  source /path/to/new/virtual/env/bin/activate
+  source .venv/bin/activate
   ```
   > and exit the environment at any time by running `deactivate`.
 

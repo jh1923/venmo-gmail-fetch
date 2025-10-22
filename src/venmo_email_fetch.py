@@ -9,8 +9,8 @@ from googleapiclient.discovery import build
 
 # --- Configuration ---
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
-TOKEN_PATH = 'token.json'
-CREDENTIALS_PATH = 'credentials.json'
+TOKEN_PATH = 'env/token.json'
+CREDENTIALS_PATH = 'env/credentials.json'
 LABEL_NAME = 'Banking and Credit/Venmo'  # Change this to your Gmail label name
 	
 def authenticate_gmail():
@@ -160,4 +160,4 @@ def log_results():
                 f.write("\n\t" + str(transaction))    
 
 if __name__ == "__main__":
-    main()
+    log_results()
