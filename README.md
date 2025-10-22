@@ -47,10 +47,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -74,39 +72,71 @@ Venmo does not have an official public API, so services that require information
 <p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Setup
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3135/)
+
+- You'll need a Google/Gmail account that is accessible to you in order to fetch emails. 
+- You'll also need to sign up for Google Cloud Console if you haven't already (using the same Google account). You can do that [here](https://console.cloud.google.com/).
+
+### Gmail
+We need to set up a filter and label to store emails from Venmo for us to parse.
+1. Sign in to your Gmail account at https://mail.google.com/.
+2. Go to "Settings" > "See all settings" > "[Filters and Blocked Addresses](https://mail.google.com/mail/u/0/#settings/filters)."
+3. Add the filter to label your Venmo emails. You can do this in one of two ways:
+    - Use the prewritten filter included in this repo at [setup/mailFilters.xml](setup/mailFilters.xml). You should edit the line `<apps:property name='label' value='labelname'/>`, where `labelname` should be the name of the label you want to use; It's set to 'Venmo' by default. Select "Import filters" > "Choose file" and upload the file. Select "Open file" and check the box next to the imported filter as well as "Apply new filters to existing email." Select "Create filters" to create the filter.
+    - Create the filter yourself from scratch. Select "Create a new filter" and give it this search criteria[^1]:
+        ```
+        from:(venmo@venmo.com) “Transaction ID”
+        ```  
+        ![Screenshot of search criteria for Gmail filter setup](setup/search_criteria.png)
+
+        Now select "Create filter" and check whichever options you want to apply. These steps are necessary:
+        - "Apply the label: `labelname`" where `labelname` is the name of the label you're going to use later to parse your Venmo emails.
+        - > [!Important] Do NOT check "Mark as read"; the script will parse unread emails in the label and mark them as read afterwards.
+        
+        I recommend these options as well:
+        - "Skip the Inbox (Archive it)" reduces clutter in your email inbox.
+        - "Never send it to Spam" 
+        - "Also apply filter to matching conversations" if you want to get all of your older Venmo transactions that are still in your inbox.
+
+        Select "Create filter" to create the filter.
+        ![Screenshot of filter options for Gmail filter setup](setup/filter_options.png)
+        
+        
+[^1]: This is how we ensure that all emails in our filter are associated with Venmo transactions, because they all have a Transaction ID.
+
+### Google Cloud Console
+We use Google Cloud Console's Gmail API and OAuth token to ensure that our script has access to the Gmail inbox where we added our filter and label.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+> [!TIP]
+> Using a virtual environment is recommended in order to keep your system environment clean. Create a virtual environment in this directory by running:
+  ```sh 
+  python -m venv /path/to/new/virtual/env
+  ```
+  > Then, enter the virtual environment
+  ```sh
+  source /path/to/new/virtual/env/bin/activate
+  ```
+  > and exit the environment at any time by running `deactivate`.
+
+1. Clone the repo
    ```sh
    git clone https://github.com/jh1923/venmo-gmail-fetch.git
    ```
-3. Install NPM packages
+2. Install packages
    ```sh
-   npm install
+   pip install -r scripts/requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin jh1923/venmo-gmail-fetch
-   git remote -v # confirm the changes
-   ```
+3. Upload your Google Cloud Console project credentials file
+4. 
 
 <p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
