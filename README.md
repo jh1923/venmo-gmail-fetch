@@ -186,7 +186,7 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jh1923
 [product-screenshot]: images/screenshot.png
-[top-arrow]: https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/arrow-turn-up.svg
+[top-arrow]: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/840c215f894f429b26b8c1402a65da835dc5a450/svgs/solid/arrow-turn-up.svg
 [top-arrow-url]: #readme-top
 
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
