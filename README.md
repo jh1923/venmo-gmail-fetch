@@ -117,15 +117,17 @@ We use Google Cloud Console's Gmail API and OAuth token to ensure that our scrip
 ### Installation
 
 > [!TIP]
-> Using a virtual environment is recommended in order to keep your system environment clean. Create a virtual environment in this directory by running:
+> Using a virtual environment is recommended in order to keep your system environment clean. 
+
+Create a virtual environment in this directory by running:
   ```sh 
   python -m venv .venv
   ```
-  > Then, enter the virtual environment
+  Then, enter the virtual environment
   ```sh
   source .venv/bin/activate
   ```
-  > and exit the environment at any time by running `deactivate`.
+  and exit the environment at any time by running `deactivate`.
 
 1. Clone the repo
    ```sh
