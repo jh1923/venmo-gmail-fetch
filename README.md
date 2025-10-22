@@ -62,15 +62,16 @@
 
 Venmo does not have an official public API, so services that require information from Venmo (e.g. budgeting apps) can break when Venmo's authentication settings update. This project is meant to be a workaround using Venmo's built-in email notification system.
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
 
 
 ### Built With
 
+[![Debian][debian]][debian-url]
+[![Python][python]][python-url] 
 [![Google Cloud][google-cloud]][google-cloud-url]
+[![Gmail][gmail]][gmail-url]
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
-
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -107,7 +108,7 @@ This is an example of how to list things you need to use the software and how to
    git remote -v # confirm the changes
    ```
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 
 
@@ -118,31 +119,13 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/jh1923/venmo-gmail-fetch/issues) for a full list of proposed features (and known issues).
-
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -150,7 +133,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 
 <!-- LICENSE -->
@@ -158,7 +141,7 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -167,7 +150,7 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 * Badges from [Shields.io](https://shields.io/badges/static-badge).
 * []()
 
-<p align="right"><a href="[top-arrow-link]" title="Back to Top"><img src=[top-arrow]></a></p>
+<p align="right"><a href="#readme-top" title="Back to Top"><img src="https://www.svgrepo.com/show/472409/arrow-up-to-line.svg" height="20" ></a></p>
 
 
 
@@ -185,10 +168,13 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 [license-url]: https://github.com/jh1923/venmo-gmail-fetch/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jh1923
-[product-screenshot]: images/screenshot.png
-[top-arrow]: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/840c215f894f429b26b8c1402a65da835dc5a450/svgs/solid/arrow-turn-up.svg
-[top-arrow-url]: #readme-top
 
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
 [google-cloud]: https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?logo=google-cloud&logoColor=white
 [google-cloud-url]: https://cloud.google.com/
+[python]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff
+[python-url]: https://www.python.org/
+[debian]: https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=fff
+[debian-url]: https://www.debian.org/
+[gmail]: https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white
+[gmail-url]: https://mail.google.com/
