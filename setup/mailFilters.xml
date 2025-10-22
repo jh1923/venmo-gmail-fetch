@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+	<title>Mail Filters</title>
+	<id>tag:mail.google.com,2008:filters:z0000001684876755078*1547392610011621024</id>
+	<updated>2025-10-22T21:34:56Z</updated>
+	<author>
+		<name>name</name>
+		<email>email@email.email</email>
+	</author>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z0000001684876755078*1547392610011621024</id>
+		<updated>2025-10-22T21:34:56Z</updated>
+		<content></content>
+		<apps:property name='from' value='venmo@venmo.com'/>
+		<apps:property name='hasTheWord' value='“Transaction ID”'/>
+		<apps:property name='label' value='Venmo'/>
+		<apps:property name='shouldArchive' value='true'/>
+		<apps:property name='shouldNeverSpam' value='true'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+</feed>
