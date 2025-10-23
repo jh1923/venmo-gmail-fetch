@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from dotenv import dotenv_values 
 import re
 
 from google.auth.transport.requests import Request
@@ -8,10 +9,11 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
 # --- Configuration ---
-SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
-TOKEN_PATH = 'env/token.json'
-CREDENTIALS_PATH = 'env/credentials.json'
-LABEL_NAME = 'Banking and Credit/Venmo'  # Change this to your Gmail label name
+config = dotenv_values()
+SCOPES = config.get("SCOPES")
+TOKEN_PATH = config.get("TOKEN_PATH")
+CREDENTIALS_PATH = config.get("CREDENTIALS_PATH ")
+LABEL_NAME = config.get("LABEL_NAME")
 	
 def authenticate_gmail():
     creds = None
@@ -42,14 +44,9 @@ def get_unread_emails(service, label_id):
     ).execute()
     return response.get('messages', [])
 
-def get_message(service, msg_id):
-    return service.users().messages().get(userId='me', id=msg_id, format='minimal').execute()
-
-def get_snippet(msg): 
-    return msg['snippet']
-
-def get_date(msg):
-    return datetime.fromtimestamp(msg['internalDate'])
+def get_message(service, msg_id): return service.users().messages().get(userId='me', id=msg_id, format='minimal').execute()
+def get_snippet(msg): return msg['snippet']
+def get_date(msg): return datetime.fromtimestamp(msg['internalDate'])
 
 def get_snippet_details(snippet):     
     def get_money_from_str(string):
@@ -144,7 +141,7 @@ def main():
             msg_info = get_message(service, msg_id)
             snippet = get_snippet(msg_info)
             details = get_snippet_details(snippet)
-            details['date'] = datetime.fromtimestamp(int(msg_info['internalDate'])/1000.0)
+            details['date'] = datetime.fromtimestamp(int(msg_info['internalDate'])/1000.0).isoformat()
             # with open('fetch_venmo.log', 'a') as f:
             #     f.write(str(details)+'\n')
             transactions.append(details)
@@ -152,12 +149,15 @@ def main():
     return transactions
 
 def log_results():
-    with open("fetch_results.log", 'w') as f:
+    LOG_FILE = config.get("LOG_PATH")
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, 'a') as f:
         info = main()
         f.write(f"{datetime.now().strftime('%m-%d-%Y %H:%M:%S')} | {'No unread emails.' if not info else 'New transactions found: '}")
         if info:
             for transaction in info:
-                f.write("\n\t" + str(transaction))    
+                f.write("\n\t" + str(transaction)) 
+        f.write("\n")   
 
 if __name__ == "__main__":
     log_results()

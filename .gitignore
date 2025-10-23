@@ -3,3 +3,5 @@ token.json
 .venv
 .vscode
 fetch_results.log
+.env
+logs/results.log
