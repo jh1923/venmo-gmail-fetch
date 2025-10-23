@@ -32,23 +32,27 @@
 <a id="table-of-contents"></a>
 <details open>
   <summary>Table of Contents</summary>
-  <ol>
+  <ul>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#design">Design</a></li>
       </ul>
     </li>
     <li>
       <a href="#setup">Setup</a>
-      <ul>
+      <ol>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#gmail">Gmail Filter and Label</a></li>
         <li><a href="#google-cloud-console">Google Cloud Console</a></li>
         <li><a href="#installation">Installation</a></li>
-      </ul>
+      </ol>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul><li><a href="#scripts">Scripts</a></li></ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -63,8 +67,6 @@
 
 Venmo does not have an official public API, so services that require information from Venmo (e.g. budgeting apps) can break when Venmo's authentication settings update. This project is meant to be a workaround using Venmo's built-in email notification system.
 
-
-
 ### Built With
 
 [![Debian][debian]][debian-url]
@@ -72,13 +74,13 @@ Venmo does not have an official public API, so services that require information
 [![Google Cloud][google-cloud]][google-cloud-url]
 [![Gmail][gmail]][gmail-url]
 
+### Design
+
+
 <p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
 <!-- SETUP -->
 ## Setup
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -123,23 +125,23 @@ We use Google Cloud Console's Gmail API and OAuth token generation to ensure tha
 ![Screenshot of the APIs and services sidebar with the credentials page selected](setup/credentials_option.png)   
  Select "Create credentials" > "OAuth client ID" > "Configure consent screen" > "Get started." ![Screenshot showing the create credentials menu and the OAuth client ID selection](setup/create_credentials.png) ![Screenshot showing the initial OAuth client ID creation page without consent screen configured](setup/configure_consent.png)
  5. Give the app a relevant name and add the user support email. Go through the rest of the process with your information and select "Create" at the end to create the OAuth configuration. 
- 6. Now, in the "OAuth Overview" screen, select "Create OAuth client" and choose "Desktop app" for the application type. With the OAuth client created, select "Download JSON" and save it as "credentials.json." [Screenshot showing the OAuth client created screen with information about the client and a link to download the information](setup/client_created.png) The JSON file should look something like this: 
- 
- ```json
-{
-    "installed": {
-        "client_id": "####-xxxx.apps.googleusercontent.com",
-        "project_id": "project-name-476015",
-        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-        "token_uri": "https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_secret": "XXXX-xxxx",
-        "redirect_uris": [
-            "http://localhost"
-        ]
+<a id="credentials-json-download"></a>
+ 6. Now, in the "OAuth Overview" screen, select "Create OAuth client" and choose "Desktop app" for the application type. With the OAuth client created, select "Download JSON" and save it as "credentials.json." `credentials.json` should look something like this: 
+  ```json
+    {
+        "installed": {
+            "client_id": "####-xxxx.apps.googleusercontent.com",
+            "project_id": "project-name-476015",
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+            "client_secret": "XXXX-xxxx",
+            "redirect_uris": [
+                "http://localhost"
+            ]
+        }
     }
-}
- ```
+  ```
 
 
 ### Installation
@@ -171,10 +173,24 @@ Create a virtual environment in this directory by running:
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+In the root directory of this repo, add a `.env` file with these attributes, with the values changed according to your preferences:
+```
+LABEL_NAME="Venmo"
+CREDENTIALS_PATH=credentials/credentials.json_example
+TOKEN_PATH=credentials/token.json
+LOG_PATH="results.log"
+```
+- `LABEL_NAME` is the name of the [label you set in Gmail](#gmail).
+- `CREDENTIALS_PATH` points to the `credentials.json` file you saved from [creating the OAuth client](#credentials-json-download).
+-  `LOG_PATH` is the place where you want the log file to be created.
+- `TOKEN_PATH` is the place where you want the token file to be created.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+You can run the main script directly in the terminal with this command:
+```sh
+python src/venmo_email_fetch.py
+```
+### Scripts
+There are some scripts in the [scripts/](scripts) directory for running and testing code.
 
 <p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
