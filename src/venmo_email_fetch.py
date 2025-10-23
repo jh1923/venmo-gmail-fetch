@@ -10,7 +10,7 @@ from googleapiclient.discovery import build
 
 # --- Configuration ---
 config = dotenv_values()
-SCOPES = config.get("SCOPES")
+SCOPES=['https://www.googleapis.com/auth/gmail.modify']
 TOKEN_PATH = config.get("TOKEN_PATH")
 CREDENTIALS_PATH = config.get("CREDENTIALS_PATH ")
 LABEL_NAME = config.get("LABEL_NAME")
