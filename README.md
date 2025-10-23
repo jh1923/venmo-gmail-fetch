@@ -5,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -59,7 +59,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project  
 
 Venmo does not have an official public API, so services that require information from Venmo (e.g. budgeting apps) can break when Venmo's authentication settings update. This project is meant to be a workaround using Venmo's built-in email notification system.
 
@@ -111,8 +111,36 @@ We need to set up a filter and label to store emails from Venmo for us to parse.
         Select "Create filter" to create the filter.
         ![Screenshot of filter options for Gmail filter setup](setup/filter_options.png)
 
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
+
 ### Google Cloud Console
-We use Google Cloud Console's Gmail API and OAuth token to ensure that our script has access to the Gmail inbox where we added our filter and label.
+We use Google Cloud Console's Gmail API and OAuth token generation to ensure that our script has access to the Gmail inbox where we added our filter and label.
+
+1. Sign in to your Google account at https://console.cloud.google.com/.
+2. Go to "Select a project" > "New project" and enter the name of the project;it can be anything, but I suggest something relevant like "Venmo Email Fetcher." Select the "Create" button and you should receive a notification on the site that you've created a new project. Select the project you just created to work in it.
+3. Go to "APIs & Services" and select "Enable APIs & Services." Search for and enable "Gmail API." ![Screenshot of the Gmail API overview site](setup/gmail_api.png) You should now be able to see the Gmail API in your list of "Enabled APIs & services."
+4. In the APIs & services sidebar, select "Credentials."
+![Screenshot of the APIs and services sidebar with the credentials page selected](setup/credentials_option.png)   
+ Select "Create credentials" > "OAuth client ID" > "Configure consent screen" > "Get started." ![Screenshot showing the create credentials menu and the OAuth client ID selection](setup/create_credentials.png) ![Screenshot showing the initial OAuth client ID creation page without consent screen configured](setup/configure_consent.png)
+ 5. Give the app a relevant name and add the user support email. Go through the rest of the process with your information and select "Create" at the end to create the OAuth configuration. 
+ 6. Now, in the "OAuth Overview" screen, select "Create OAuth client" and choose "Desktop app" for the application type. With the OAuth client created, select "Download JSON" and save it as "credentials.json." [Screenshot showing the OAuth client created screen with information about the client and a link to download the information](setup/client_created.png) The JSON file should look something like this: 
+ 
+ ```json
+{
+    "installed": {
+        "client_id": "####-xxxx.apps.googleusercontent.com",
+        "project_id": "project-name-476015",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "XXXX-xxxx",
+        "redirect_uris": [
+            "http://localhost"
+        ]
+    }
+}
+ ```
+
 
 ### Installation
 
