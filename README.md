@@ -214,12 +214,13 @@ Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more infor
 * The [README template](https://github.com/othneildrew/Best-README-Template/blob/main/BLANK_README.md) used for this project was created by [othneildrew](https://github.com/othneildrew).
 * Badges are sourced from [Shields.io](https://shields.io/badges/static-badge).
 
+<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
 
 ## Footnotes
         
 [^1]: This is how we ensure that all emails in our filter are associated with Venmo transactions, because they all have a Transaction ID.
 
-<p align="right"><a href="#table-of-contents">Table of Contents ↑</a></p>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
